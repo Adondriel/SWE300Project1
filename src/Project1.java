@@ -21,10 +21,10 @@ public class Project1 {
 
 	/**
 	 * @param args
-	 *            Get User Input for Number of Runs to attempt For each Run --
-	 *            Get user input for the target text -- Get user input for the
-	 *            pattern to search the target text for -- find and print the #
-	 *            of distinct sequences in the target text that the pattern
+	 *            Get User Input for Number of Runs to attempt For each Run
+	 *            Get user input for the target text
+	 *            Get user input for the pattern to search the target text for 
+	 *            find and print the # of distinct sequences in the target text that the pattern
 	 *            matches
 	 * @throws IOException
 	 */
@@ -38,7 +38,6 @@ public class Project1 {
 			String pattern = new String(userInput.readLine());
 			System.out.println(findDistinctSubsequences(pattern, targetText));
 		}
-
 	}
 
 	/**
@@ -57,7 +56,6 @@ public class Project1 {
 		int matchesFound[][] = initializeArray(patternLength, targetTextLength);
 
 		return storeCount(matchesFound, pattern, (patternLength - 1), targetText, (targetTextLength - 1));
-
 	}
 
 	/**
@@ -77,9 +75,7 @@ public class Project1 {
 				tempArray[row][col] = -1;
 			}
 		}
-
 		return tempArray;
-
 	}
 
 	/**
@@ -96,8 +92,7 @@ public class Project1 {
 	 * @return count within given row and column or 1 if current position in
 	 *         pattern is -1
 	 */
-	private static int storeCount(int[][] matchesFound, String pattern, int currPatternPos, String targetText,
-			int currTargetPos) {
+	private static int storeCount(int[][] matchesFound, String pattern, int currPatternPos, String targetText, int currTargetPos) {
 
 		if (currPatternPos == -1) {
 			return 1;
@@ -117,17 +112,16 @@ public class Project1 {
 	 * @param currPatternPos
 	 * @param targetText
 	 * @param currTargetPos
-	 *            Check for the following: -- If the pattern has been exhausted
-	 *            -- If the current position in the pattern is larger than the
-	 *            current position in the target -- If the both positions are
-	 *            equal ---- If yes, then check if all characters leading up to
-	 *            position match -- If the characters at both positions match
-	 *            ---- If yes, then do the following: ------ Check one position
-	 *            left of both the current pattern position and current target
-	 *            position ------ Check one position left of only the current
-	 *            target position, maintaining the current pattern position --
-	 *            If all Checks fail, Check one position left of only the
-	 *            current target position, maintaining the current pattern
+	 *            Check for the following: 
+	 *            -- If the pattern has been exhausted
+	 *            -- If the current position in the pattern is larger than the current position in the target 
+	 *            -- If the both positions are equal 
+	 *            ---- If yes, then check if all characters leading up to position match 
+	 *            -- If the characters at both positions match
+	 *            ---- If yes, then do the following: 
+	 *            ------ Check one position left of both the current pattern position and current target position 
+	 *            ------ Check one position left of only the current target position, maintaining the current pattern position 
+	 *            -- If all Checks fail, Check one position left of only the current target position, maintaining the current pattern
 	 *            position
 	 * @return count of matches
 	 */
