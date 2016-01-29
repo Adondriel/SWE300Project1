@@ -47,7 +47,7 @@ public class Project1 {
 	 *            : Find the length of the targetText Initialize the
 	 *            matchesFound array Begin recursive memoization to find
 	 *            Subsequences
-	 * @return
+	 * @return distinct subsequences
 	 */
 	private static int findDistinctSubsequences(String pattern, String targetText) {
 
@@ -64,7 +64,7 @@ public class Project1 {
 	 * @param totalCols
 	 *            : equal to length of target text ( m ) Create an ( n ) x ( m )
 	 *            array and initialize each cell to -1
-	 * @return the created matrix
+	 * @return the created 2d Array
 	 */
 	private static int[][] initializeArray(int totalRows, int totalCols) {
 
